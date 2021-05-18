@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mata Mosquito</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/game.js"></script>
+    </head>
+    <body onresize="adjustsSizeSetGame()">
+        <div class="painel">
+            <div class="lives">
+                <img id="l1" src="images/full_heart.png" >
+                <img id="l2" src="images/full_heart.png" >
+                <img id="l3" src="images/full_heart.png" >
+            </div>
+            <div class="chronometer">Tempo restante: <span id="chronometer"></span></div>
+        </div>
+        <script>
+            document.getElementById('chronometer').innerHTML = time;
+
+            var createGnat = setInterval(function(){
+                randomPosition()
+            }, createTimeGnat)
+        </script>
+    </body>
+</html>
